@@ -77,9 +77,14 @@ image_dir = os.path.join(os.getcwd(), "images") + "\\"
 results_dir = os.path.join(os.getcwd(), "results") + "\\"
 confidence_test_dir = os.path.join(os.getcwd(), "conf_test_results") + "\\"
 
+test_image_dir = os.path.join(os.getcwd(), "test_images") + "\\"
+test_results_dir = os.path.join(os.getcwd(), "test_results") + "\\"
+
 all_image_object_detection(object_detector, image_dir, results_dir) 
 
-confidence_test_list = [0.1, 0.25, 0.5, 0.75, 0.9]
-confidence_tests(object_detector, "1.jpg", confidence_test_dir, confidence_test_list)
+# confidence_test_list = [0.1, 0.25, 0.5, 0.75, 0.9]
+# confidence_tests(object_detector, "1.jpg", confidence_test_dir, confidence_test_list)
+
+all_image_object_detection(object_detector, test_image_dir, test_results_dir) 
 
 
